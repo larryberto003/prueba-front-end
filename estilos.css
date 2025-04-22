@@ -1,0 +1,39 @@
+/* Estilo para todos los campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease; /* Agrega una transición suave */
+    background-color: #333; /* Fondo oscuro */
+    color: #fff; /* Texto claro */
+    border: 1px solid #555; /* Borde más oscuro */
+}
+
+/* Estilo para campos de texto específicos */
+input[type="text"] {
+    background-color: #444; /* Fondo ligeramente más claro */
+    color: #fff; /* Texto claro */
+}
+
+input[type="text"]:hover {
+    background-color: #555; /* Cambia el color de fondo al pasar el cursor */
+}
+
+/* Estilo para botones */
+input[type="submit"], input[type="button"] {
+    background-color: #555; /* Fondo oscuro */
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Agrega una transición suave */
+}
+
+input[type="submit"]:hover, input[type="button"]:hover {
+    background-color: #666; /* Fondo más claro al pasar el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
