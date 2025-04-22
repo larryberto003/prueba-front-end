@@ -1,0 +1,55 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\jaime\prueba_front_end\estilos.css">
+</head>
+<body>
+    <h1>Primera Prueba</h1>
+    <form id="formulario" action="/submit" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        <br>
+        <label for="telefono">Número Telefónico:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+        <br>
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" required>
+        <br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <a id="enlace" href="https://portal.inacap.cl/estudiantes" target="_blank" style="display: none;">Ir al portal de estudiantes de INACAP</a>
+    <br>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAk1BMVEX////jBRMFAAAAAADiAACXlpbsa3DsYmnzoaV1dHS0tLTh4eHjAArjAA7nMzz97O7kHCX4+PhSUVFFQ0NNSkrY19c+OzuNjIzxkpakpKQfHBy3trZoZmbBwMDe3t40MTHu7u4qJiadnJxeXFzLyspta2v2vcDsXmXxmJzwh4zkERuioaESCwuIh4c0MjIcGhrrUlovJ+PkAAADnUlEQVR4nO3Z4XaaMACGYWfqOnTdiooO0YqKW9dqu/u/ugkJEEiweqqgnvf5s2OTkHwYkuBaLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAdM9fD3D/u+lhfsKfu0N8a3qYn3B/9+VjJLxoJCTh5SMhCS8fCW844YM8r91uwofH5187f1+0hF6nwI/c/Dq9TqnQM/tyI1+rEP8lKjZadkOtelAsDHqnTfj9R1L88/EhT9gVZf1Zep3IKBPOUyGePyqUzuPbMzYaLZbZbVuXyyYd/QacJ2G7aNfrKswSmoXLvJ9XUawgRnGSTrnRrtUk/fYdyxW7NSeMO51WJYwL/bSbdbm4KmHcqleRMC7r1JFQzZm0zyhNWKAKQ9nLWORjVN4ss1RVmRYSlrrzW0c6PqHIx5r84yRlYTcXbPtpxHFS6GXjE5uhNFjHCT2tVdeZp608LaFIqi/SkNk3fL6E2feym2Lys/W6UzW8ZN1YqZGvo/2D8eZCuy9JQtFWZb2tirg+f8LsJg5ll/YLy/iTMB6cGtv2w9HM9GnhlG6gL4p3uIaEzr6E07yymt2LA4Yja66sCVsDWTqraFtHwjB/roJ+XlnVq1oGn2Z5q+QpF33XmlCuV/oeVG/C2dpcGGXlVfW9d/2BpVVFwkifw7UndFfCuiPGlYdC21YKvIW1VUXCJ9nfoJmEU8tISwnNk2o4sTW6zIRetsdbZmm/6jvsGI32zlKVsN9IwnSso45lpVF7Y2B0vlG3YeWnS83elWbW5HPYN5Y5J6/c0fcAnQqoTd+9CVV/R57bTpRwUCoqJHxSk688TT19TqrMexKGC/mHZvZDtRlrb4RaQlcdfja+lqWVPVfDvQnTU1vLVZO93TrOiRKqLc/JB6slbAXpijLadj0lvhlqlmrTzpyl7aT2zB9PCof52hMu0wyLgTLRK6/yl4vsZX6XYqQiinnaylhL28Vldnf2C5tJGAojQ1ur7L5Z34ADY49pGwlLzTaW339qSRj/hmOOJ6+8e4hsv2JUnBOqEu7em48OeLpzqb+xHMC0ysFIe1VPE7rOR6c27VJCvDvFpeog/6r+Y/tFJpQfnmUIOZOyBXMqP6tP4etcmLTVNfKHm7xgIgcbbd/NRiPbczjfBuHx+S5aabe4QcaZ5uaQ8PqR8PqR8Po5hQPFLZIJN00P44xcqelhAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMC1+w8aa0hk3rEjQgAAAABJRU5ErkJggg=="
+        alt="Descripción de la imagen" width="200" style="position: absolute; top: 0; right: 0;">
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 200px; /* Adjusted to avoid collision with the image */
+        }
+    </style>
+    <script>
+        const formulario = document.getElementById('formulario');
+        const enlace = document.getElementById('enlace');
+
+        formulario.addEventListener('input', () => {
+            const campos = formulario.querySelectorAll('input');
+            const todosLlenos = Array.from(campos).every(campo => campo.value.trim() !== '');
+            enlace.style.display = todosLlenos ? 'inline' : 'none';
+        });
+    </script>
+</body>
+</html>
